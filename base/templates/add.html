@@ -1,0 +1,17 @@
+{%extends 'main.html' %}
+{%block content%}
+<h1>add</h1>
+<form action="" method="POST">
+    {%csrf_token%}
+    <label for="">ename</label>
+    <input type="text" name="ename">
+    <label for="">rollno</label>
+    <input type="text" name="rollno">
+    <label for="">ename</label>
+    <input type="text" name="course">
+    <label for="">ename</label>
+    <input type="text" name="mobileno">
+    <input type="file" name="image" id="">
+    <input type="submit">
+</form>
+{%endblock content%}

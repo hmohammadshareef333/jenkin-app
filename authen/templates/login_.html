@@ -1,0 +1,13 @@
+
+{%extends 'main.html'%}
+{%block content%}
+<h1>login</h1>
+<fieldset>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <input type="text" name="username" placeholder="username">
+        <input type="text" name="password" placeholder="password">
+        <input type="submit">
+    </form>
+</fieldset>
+{%endblock content%}
