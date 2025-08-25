@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% block content %}
+<fieldset>  
+    <h1 class="ln">edit form</h1><hr> 
+    <div class="forms"><center>  
+   <form action="" method="post">
+      {% csrf_token %}
+   <label for="">Studentname</label>
+   <input type="text" placeholder="studentname" name="ename" value="{{record.ename}}"> <br>
+
+   <label for="">Rollnumber</label>
+   <input type="text" placeholder="Rollnumber" name="rollno" value="{{record.rollno}}"> <br>
+
+   <label for="">Course</label>
+   <input type="text" placeholder="Course" name='course' value="{{record.course}}"> <br>
+
+   <label for="">mobilenumber</label>
+   <input type="text" placeholder="mobilenumber" name="mobileno" value="{{record.mobileno}}"> <br>
+
+   <button type="submit">submit</button>
+
+
+ </form></center></div></fieldset>
+ {% endblock content %}

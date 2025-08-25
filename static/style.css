@@ -1,0 +1,12 @@
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+img{
+    width: 250px;
+    height: 250px;
+}

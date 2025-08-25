@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% block content %}
+  <div class="homebase">
+    <form action="">
+        <input type="text" name="query">
+        <input type="submit" value="search">
+    </form>
+    <a href="{%url 'home' %}" style="color: white;">all</a>
+  <table border="6px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rollnumber</th>
+            <th>Course</th>
+            <th>Mobilenumber</th>
+            <th>edit</th>
+            <th>delete</th>
+            <th>image</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for i in record %}<tr>
+            <td>{{i.ename}}</td>
+            <td>{{i.rollno}}</td>
+            <td> {{i.course}}</td>
+            <td>{{i.mobileno}}</td>
+            <td><a href="{% url 'edit'  i.id %}" class="editb">edit</a></td>
+            <td><a href="{% url 'delete' i.id %}"  class="deleteb">delete</a></td>
+            <td><a href="{{i.image.url}}"></a></td>
+            
+        </tr>{% endfor %}
+
+    </tbody>
+</table>  </div>
+{% endblock content %}
